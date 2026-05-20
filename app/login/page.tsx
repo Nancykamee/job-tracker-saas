@@ -1,3 +1,4 @@
+import Input from "../components/Input";
 export default function LoginPage() {
   return (
     <main className="min-h-screen bg-black text-white flex items-center justify-center px-6">
@@ -16,40 +17,27 @@ export default function LoginPage() {
 
         </div>
 
-        <form className="space-y-5">
+<form className="space-y-5">
 
-          <div>
-            <label className="block text-sm mb-2 text-gray-300">
-              Email
-            </label>
+  <Input
+    label="Email"
+    type="email"
+    placeholder="email@email.com"
+  />
 
-            <input
-              type="email"
-              placeholder="you@example.com"
-              className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-white/40"
-            />
-          </div>
+  <Input
+    label="Password"
+    type="password"
+    placeholder="Enter password"
+  />
 
-          <div>
-            <label className="block text-sm mb-2 text-gray-300">
-              Password
-            </label>
+  <button
+    className="w-full bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
+  >
+    Login
+  </button>
 
-            <input
-              type="password"
-              placeholder="Enter password"
-              className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-white/40"
-            />
-          </div>
-
-          <button
-            className="w-full bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
-          >
-            Login
-          </button>
-
-        </form>
-
+</form>
         <p className="text-center text-gray-500 text-sm mt-6">
           Don’t have an account?{" "}
           <span className="text-white cursor-pointer hover:underline">

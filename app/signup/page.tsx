@@ -37,7 +37,7 @@ export default function SignupPage() {
 
             <input
               type="email"
-              placeholder="you@gmail.com"
+              placeholder="email@email.com"
               className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-white/40"
             />
           </div>
