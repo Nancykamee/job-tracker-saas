@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Input from "../components/Input";
 export default function LoginPage() {
   return (
@@ -17,32 +18,35 @@ export default function LoginPage() {
 
         </div>
 
-<form className="space-y-5">
+        <form className="space-y-5">
 
-  <Input
-    label="Email"
-    type="email"
-    placeholder="email@email.com"
-  />
+          <Input
+            label="Email"
+            type="email"
+            placeholder="email@email.com"
+          />
 
-  <Input
-    label="Password"
-    type="password"
-    placeholder="Enter password"
-  />
+          <Input
+            label="Password"
+            type="password"
+            placeholder="Enter password"
+          />
 
-  <button
-    className="w-full bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
-  >
-    Login
-  </button>
+          <button
+            className="w-full bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
+          >
+            Login
+          </button>
 
-</form>
+        </form>
         <p className="text-center text-gray-500 text-sm mt-6">
           Don’t have an account?{" "}
-          <span className="text-white cursor-pointer hover:underline">
+          <Link
+            href="/signup"
+            className="text-white hover:underline"
+          >
             Sign up
-          </span>
+          </Link>
         </p>
 
       </div>

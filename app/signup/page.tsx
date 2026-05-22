@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Input from "../components/Input";
 export default function SignupPage() {
   return (
@@ -19,54 +20,40 @@ export default function SignupPage() {
 
         <form className="space-y-5">
 
-          <div>
-            <label className="block text-sm mb-2 text-gray-300">
-              Full Name
-            </label>
+          <Input
+            label="Full Name"
+            type="text"
+            placeholder="John Doe"
+          />
 
-            <input
-              type="text"
-              placeholder="Name Surname"
-              className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-white/40"
-            />
-          </div>
+          <Input
+            label="Email"
+            type="email"
+            placeholder="email@email.com"
+          />
 
-         <form className="space-y-5">
+          <Input
+            label="Password"
+            type="password"
+            placeholder="Create password"
+          />
 
-  <Input
-    label="Full Name"
-    type="text"
-    placeholder="John Doe"
-  />
-
-  <Input
-    label="Email"
-    type="email"
-    placeholder="email@email.com"
-  />
-
-  <Input
-    label="Password"
-    type="password"
-    placeholder="Create password"
-  />
-
-  <button
-    className="w-full bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
-  >
-    Create Account
-  </button>
-
-</form>
-        
+          <button
+            className="w-full bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
+          >
+            Create Account
+          </button>
 
         </form>
 
         <p className="text-center text-gray-500 text-sm mt-6">
           Already have an account?{" "}
-          <span className="text-white cursor-pointer hover:underline">
+          <Link
+            href="/login"
+            className="text-white hover:underline"
+          >
             Login
-          </span>
+          </Link>
         </p>
 
       </div>
