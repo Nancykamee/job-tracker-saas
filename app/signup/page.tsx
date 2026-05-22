@@ -1,3 +1,4 @@
+import Input from "../components/Input";
 export default function SignupPage() {
   return (
     <main className="min-h-screen bg-black text-white flex items-center justify-center px-6">
@@ -30,35 +31,34 @@ export default function SignupPage() {
             />
           </div>
 
-          <div>
-            <label className="block text-sm mb-2 text-gray-300">
-              Email
-            </label>
+         <form className="space-y-5">
 
-            <input
-              type="email"
-              placeholder="email@email.com"
-              className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-white/40"
-            />
-          </div>
+  <Input
+    label="Full Name"
+    type="text"
+    placeholder="John Doe"
+  />
 
-          <div>
-            <label className="block text-sm mb-2 text-gray-300">
-              Password
-            </label>
+  <Input
+    label="Email"
+    type="email"
+    placeholder="email@email.com"
+  />
 
-            <input
-              type="password"
-              placeholder="Create password"
-              className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-white/40"
-            />
-          </div>
+  <Input
+    label="Password"
+    type="password"
+    placeholder="Create password"
+  />
 
-          <button
-            className="w-full bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
-          >
-            Create Account
-          </button>
+  <button
+    className="w-full bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
+  >
+    Create Account
+  </button>
+
+</form>
+        
 
         </form>
 
