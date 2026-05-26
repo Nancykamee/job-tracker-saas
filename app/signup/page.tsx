@@ -1,3 +1,4 @@
+import Button from "../components/Button";
 import Link from "next/link";
 import Input from "../components/Input";
 export default function SignupPage() {
@@ -38,11 +39,9 @@ export default function SignupPage() {
             placeholder="Create password"
           />
 
-          <button
-            className="w-full bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
-          >
+          <Button>
             Create Account
-          </button>
+          </Button>
 
         </form>
 

@@ -1,3 +1,4 @@
+import Button from "../components/Button"
 import Link from "next/link";
 import Input from "../components/Input";
 export default function LoginPage() {
@@ -32,11 +33,9 @@ export default function LoginPage() {
             placeholder="Enter password"
           />
 
-          <button
-            className="w-full bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
-          >
+          <Button>
             Login
-          </button>
+          </Button>
 
         </form>
         <p className="text-center text-gray-500 text-sm mt-6">
