@@ -1,7 +1,10 @@
+"use client";
+import { useRouter } from "next/navigation";
 import Button from "../components/Button";
 import Link from "next/link";
 import Input from "../components/Input";
 export default function SignupPage() {
+  const router = useRouter();
   return (
     <main className="min-h-screen bg-black text-white flex items-center justify-center px-6">
 
@@ -38,10 +41,9 @@ export default function SignupPage() {
             type="password"
             placeholder="Create password"
           />
-
-          <Button>
-            Create Account
-          </Button>
+<Button onClick={() => router.push("/dashboard")}>
+  Create Account
+</Button>
 
         </form>
 
