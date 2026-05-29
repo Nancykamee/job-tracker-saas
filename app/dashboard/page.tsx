@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function DashboardPage() {
     const stats = [
         {
@@ -43,18 +44,27 @@ export default function DashboardPage() {
                     <button className="block text-left w-full px-4 py-3 rounded-xl bg-white text-black font-medium">
                         Dashboard
                     </button>
-
-                    <button className="block text-left w-full px-4 py-3 rounded-xl hover:bg-white/10 transition">
+                    <Link
+                        href="/dashboard/applications"
+                        className="block text-left w-full px-4 py-3 rounded-xl hover:bg-white/10 transition"
+                    >
                         Applications
-                    </button>
+                    </Link>
 
-                    <button className="block text-left w-full px-4 py-3 rounded-xl hover:bg-white/10 transition">
+
+                    <Link
+                        href="/dashboard/interviews"
+                        className="block text-left w-full px-4 py-3 rounded-xl hover:bg-white/10 transition"
+                    >
                         Interviews
-                    </button>
+                    </Link>
 
-                    <button className="block text-left w-full px-4 py-3 rounded-xl hover:bg-white/10 transition">
+                    <Link
+                        href="/dashboard/resume"
+                        className="block text-left w-full px-4 py-3 rounded-xl hover:bg-white/10 transition"
+                    >
                         Resume Builder
-                    </button>
+                    </Link>
                 </nav>
             </aside>
 
@@ -107,10 +117,10 @@ export default function DashboardPage() {
 
                                 <span
                                     className={`px-4 py-2 rounded-xl text-sm ${application.status === "Interview"
-                                            ? "bg-green-500/20 text-green-400"
-                                            : application.status === "Applied"
-                                                ? "bg-blue-500/20 text-blue-400"
-                                                : "bg-red-500/20 text-red-400"
+                                        ? "bg-green-500/20 text-green-400"
+                                        : application.status === "Applied"
+                                            ? "bg-blue-500/20 text-blue-400"
+                                            : "bg-red-500/20 text-red-400"
                                         }`}
                                 >
                                     {application.status}
